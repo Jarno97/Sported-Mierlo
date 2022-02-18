@@ -1,0 +1,261 @@
+.masthead {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 15px 0 5px black;  
+    background-repeat: no-repeat; 
+    background-size: 170%; 
+    background-position: right; 
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.biglogo {
+    padding: 200px 0;
+}
+
+.centered.segment {
+    height: 82vh;
+}
+
+#ted-header {
+    padding: 50px 0;
+}
+
+.titlesegment {
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 2px 0px 10px black;
+}
+
+.titlesegment p {
+    font-size: large;
+    color: #fff;
+
+}
+
+.titlesegment a{
+    color: rgb(204, 0, 0);
+}
+.titlesegment a:hover{
+    color: white;
+}
+.contactsegment p {
+    font-size: large;
+    color: #fff;
+}
+
+
+.four.wide.column {
+    margin: 20px;
+}
+
+.row.logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.center.aligned.column img {
+    opacity: 0.7;
+    width: 50px;
+    transition: all 150ms;
+    
+}
+
+.center.aligned.column img:hover {
+    opacity: 1;
+    width: 55px;
+    transition: all 150ms;
+    cursor: pointer;
+}
+
+.brandsegment {
+    max-height: 100%;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 2px 0px 10px black;
+}
+
+.seven {
+    margin: 10px;
+    opacity: 0.8;
+    min-height: 330px;
+}
+
+.five {
+    margin: 10px;
+    opacity: 0.8;
+}
+
+.contactsegment {
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 2px 0px 10px black;
+}
+
+.openingsegment {
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 2px 0px 10px black;
+}
+
+.footer {
+    opacity: 1;
+}
+
+.list {
+    color: #fff;
+}
+
+
+.content {
+    font-size: large;
+}
+
+.today {
+    color: rgb(204, 0, 0);
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1b1c1d;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+  }
+
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;                       /******** <- Remove this line *********/
+    animation: loader 2s ease;
+  }
+
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    
+  }
+
+  /* Hide the images by default */
+.mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+
+
+  @media only screen and (max-width: 700px ){ 
+      #contentcontainer {
+          flex-direction: column;
+      }
+      
+      #root1 {
+        background-image: url(tenniscourt.jpg);background-repeat: no-repeat; background-size: 600%; background-position: right; background-attachment: fixed;
+      }
+
+      #root2 {
+        background-image: url(contactphoto.jpg);background-repeat: no-repeat; background-size: 400%; background-position: right; background-attachment: fixed;
+      }
+
+      .main.menu {
+          position: fixed;
+          z-index: 10000;
+          width: 100%;
+      }
+      .seven {
+          opacity: 0.8;
+      }
+      .biglogo{
+          padding: 30vh 0;
+      }
+      .centered.segment{
+          height: 60vh;
+      }
+      #footerContact {
+          display: none;
+      }
+  }

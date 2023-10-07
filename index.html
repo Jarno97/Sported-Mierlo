@@ -30,9 +30,12 @@ $(document).ready(function(){
   });
 });
 
-
+$(window).on('load', fuction(){
   $(".loader-wrapper").delay(1000).fadeOut("slow");
 });
+
+
+ 
 
 $(document).ready(function() {
   $('.ui.list.time .item').eq(new Date().getDay() -1).addClass('today');

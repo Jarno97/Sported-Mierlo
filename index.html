@@ -37,7 +37,10 @@ $(window).on("load",function(){
   $(".loader-wrapper").delay(1000).fadeOut("slow");
 });
  
-
+$(window).on("load",function(){
+  window.alert('Wij zijn van 22 oktober tot en met 29 oktober gesloten. Daarna helpen wij u graag weer!')
+});
+    
 $(document).ready(function() {
   $('.ui.list.time .item').eq(new Date().getDay() -1).addClass('today');
   });

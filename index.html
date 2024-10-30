@@ -1,82 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <title>Sported | Welkom!</title>
 </head>
 <script>
-$(document).ready(function(){
-  $(window).scroll(function(){
-      $("#fadelogo").css("opacity", 1 - $(window).scrollTop() / ($('.centered.segment').height() / 2));
-  });
-});
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            $("#fadelogo").css("opacity", 1 - $(window).scrollTop() / ($('.centered.segment').height() / 2));
+        });
+    });
 
-// $(document).ready(function(){
-//     alert('Wij zijn tot en met 14 augustus gesloten.');
-// }); 
-$(document).ready(function(){
-  $(window).scroll(function(){
-      $(".seven").css("opacity", 0.8 + $(window).scrollTop() / ($('.centered.segment').height() / 2));
-  });
-});
+    // $(document).ready(function(){
+    //     alert('Wij zijn tot en met 14 augustus gesloten.');
+    // }); 
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            $(".seven").css("opacity", 0.8 + $(window).scrollTop() / ($('.centered.segment').height() / 2));
+        });
+    });
 
-$(document).ready(function(){
-  $(window).scroll(function(){
-      $(".five").css("opacity", 0.8 + $(window).scrollTop() / ($('.centered.segment').height() / 2));
-  });
-});
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            $(".five").css("opacity", 0.8 + $(window).scrollTop() / ($('.centered.segment').height() / 2));
+        });
+    });
 
-$(window).on("load",function(){
-  $(".loader-wrapper").delay(1000).fadeOut("slow");
-});
- 
-$(window).on("load",function(){
-  window.alert('Wij zijn van 22 oktober tot en met 29 oktober gesloten. Daarna helpen wij u graag weer!')
-});
-    
-$(document).ready(function() {
-  $('.ui.list.time .item').eq(new Date().getDay() -1).addClass('today');
-  });
+    $(window).on("load", function () {
+        $(".loader-wrapper").delay(1000).fadeOut("slow");
+    });
+
+    $(document).ready(function () {
+        $('.ui.list.time .item').eq(new Date().getDay() - 1).addClass('today');
+    });
 
 
-  var slideIndex = 1;
-  showSlides(slideIndex);
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
     }
-    slides[slideIndex-1].style.display = "block";
-  }</script>
-<body style="background-image: url(tennisbal.jpg);background-repeat: no-repeat; background-size: 100%; background-position: right; background-attachment: fixed;">
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }</script>
+
+<body
+    style="background-image: url(tennisbal.jpg);background-repeat: no-repeat; background-size: 100%; background-position: right; background-attachment: fixed;">
     <script src="script.js"></script>
-    <div id="root1" class="container" >
+    <div id="root1" class="container">
         <div class="ui inverted borderless fixed main menu" style="margin-bottom: 0; box-shadow: 0px 2px 4px black;">
             <div class="ui borderless container" style="display: flex;">
                 <div class="header item">
                     <img src="Tlogo.png" alt="">
-                    
+
                 </div>
                 <div class="borderless right menu">
                     <a href="#" class="active item navbar-item">Home</a>
@@ -87,53 +88,59 @@ $(document).ready(function() {
                 </div>
             </div>
         </div>
-        <div class="centered segment" >
+        <div class="centered segment">
             <div class="ui center aligned container biglogo">
                 <img id="fadelogo" src="Fulllogoblack.png" alt="" style="width: 50%; margin-right: 40px;">
-            </div>    
-                
+            </div>
+
         </div>
-        <div class="ui centered stackable inverted grid" id="contentcontainer" >
+        <div class="ui centered stackable inverted grid" id="contentcontainer">
             <div class="row">
                 <div class="seven wide column titlesegment" style="background-color: #1b1c1d;">
-                    <h1 class="ui huge inverted header" style="border-bottom: 2px rgb(235, 0, 0) solid;">Dé Tennis- en Padelspecialist van deze Regio!</h1>
+                    <h1 class="ui huge inverted header" style="border-bottom: 2px rgb(235, 0, 0) solid;">Dé Tennis- en
+                        Padelspecialist van deze Regio!</h1>
                     <p> </p>
                     <p> </p>
-                    <p>Al 33 jaar gevestigd in het centrum van Mierlo. Ons assortiment bestaat uit multifunctionele sportkleding, sportschoenen en een groot assortiment tennis- en padelrackets. </p>
-                    <p>Uiteraard kunt u ook bij ons terecht voor tennisballen, grips en andere accessoires. Wilt u uw racket deskundig laten bespannen?  Dan bent u bij Sported aan het juiste adres. Vandaag gebracht, uiterlijk morgen klaar.</p>
-                    <p>Trotse sponsor van vele tennis- en padelverenigingen en <a href="https://nielsonwheels.com/">Niels on Wheels.</a></p>
+                    <p>Al 33 jaar gevestigd in het centrum van Mierlo. Ons assortiment bestaat uit multifunctionele
+                        sportkleding, sportschoenen en een groot assortiment tennis- en padelrackets. </p>
+                    <p>Uiteraard kunt u ook bij ons terecht voor tennisballen, grips en andere accessoires. Wilt u uw
+                        racket deskundig laten bespannen? Dan bent u bij Sported aan het juiste adres. Vandaag gebracht,
+                        uiterlijk morgen klaar.</p>
+                    <p>Trotse sponsor van vele tennis- en padelverenigingen en <a
+                            href="https://nielsonwheels.com/">Niels on Wheels.</a></p>
                     <p>Kortom, Sported: Beter slaan en goed slagen!</p>
                 </div>
                 <div class="seven wide column brandsegment" style="background-color: #1b1c1d;">
-                    <h1 class="ui huge inverted header" style="border-bottom: 2px rgb(235, 0, 0) solid;" >Onze Merken</h1>
+                    <h1 class="ui huge inverted header" style="border-bottom: 2px rgb(235, 0, 0) solid;">Onze Merken
+                    </h1>
                     <div class="ui two column grid">
                         <div class="four column row logo">
                             <div class="center aligned column" style="height: 65px;">
-                                <img src="sjengwhite.png" alt="" >
+                                <img src="sjengwhite.png" alt="">
                             </div>
                             <div class="center aligned column" style="height: 65px;">
-                                <img src="kswiss white.png" alt="" >
+                                <img src="kswiss white.png" alt="">
                             </div>
-                            
+
                             <div class="center aligned column">
-                                <img src="wilsonwhite.png" alt="" >
+                                <img src="wilsonwhite.png" alt="">
                             </div>
                             <div class="right floated center aligned column">
-                                <img src="babolatwhite.png" alt="" >
+                                <img src="babolatwhite.png" alt="">
                             </div>
                         </div>
                         <div class="four column row logo">
                             <div class="center aligned column">
-                                <img src="adidaswhite.png" alt="" >
+                                <img src="adidaswhite.png" alt="">
                             </div>
                             <div class="center aligned column">
-                                <img src="asicswhite.png" alt="" >
+                                <img src="asicswhite.png" alt="">
                             </div>
                             <div class="center aligned column" style="height: 65px;">
-                                <img src="princewhite.png" alt="" >
+                                <img src="princewhite.png" alt="">
                             </div>
                             <div class="right floated center aligned column">
-                                <img src="headwhite.png" alt="" >
+                                <img src="headwhite.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -145,12 +152,12 @@ $(document).ready(function() {
                         <div class="four wide column"><img src="img1.jpeg" alt="" class="ui medium rounded image"></div>
                         <div class="four wide column"><img src="img2.jpeg" alt="" class="ui medium rounded image"></div>
                         <div class="four wide column"><img src="img3.jpg" alt="" class="ui medium rounded image"></div>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
     <div class="ui inverted footer segment">
         <div class="ui container">
@@ -163,7 +170,7 @@ $(document).ready(function() {
                         <a href="https://www.facebook.com/Sported.sport/" class="item">Facebook</a>
                     </div>
                 </div>
-                <div class="three wide column"  id="footerContact">
+                <div class="three wide column" id="footerContact">
                     <h4>Contact</h4>
                     <div class="ui footersegment list">
                         <div class="item">Ted van Gennip</div>
@@ -180,4 +187,5 @@ $(document).ready(function() {
         </div>
     </div>
 </body>
+
 </html>

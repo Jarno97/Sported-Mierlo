@@ -77,6 +77,69 @@
             height: 200px;
         }
     }
+
+    /* Lightbox styles */
+    .lightbox-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 10000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        text-align: center;
+    }
+
+    .lightbox-image {
+        max-width: 100%;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+        object-fit: contain;
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        background: red;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 0 15px black;
+        z-index: 10001;
+    }
+
+    .lightbox-close:hover {
+        background-color: darkred;
+    }
+
+    /* Make gallery images clickable */
+    .ui.three.column.grid .column img.ui.medium.rounded.image {
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .ui.three.column.grid .column img.ui.medium.rounded.image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
 </style>
     <title>Sported | Welkom!</title>
 </head>
@@ -130,7 +193,36 @@
             slides[i].style.display = "none";
         }
         slides[slideIndex - 1].style.display = "block";
-    }</script>
+    }
+
+    // Lightbox functionality
+    function openLightbox(imageSrc) {
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        lightboxImage.src = imageSrc;
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('imageLightbox');
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    // Close lightbox when clicking outside the image
+    function lightboxClick(event) {
+        if (event.target.classList.contains('lightbox-overlay')) {
+            closeLightbox();
+        }
+    }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeLightbox();
+        }
+    });</script>
 
 <body
     style="background-image: url(tennisbal.jpg);background-repeat: no-repeat; background-size: 100%; background-position: right; background-attachment: fixed;">
@@ -212,9 +304,9 @@
             <div class="row">
                 <div class="fourteen wide column titlesegment" style="background-color: #1b1c1d;">
                     <div class="ui three column grid">
-                        <div class="column"><img src="img1.jpeg" alt="" class="ui medium rounded image"></div>
-                        <div class="column"><img src="img2.jpeg" alt="" class="ui medium rounded image"></div>
-                        <div class="column"><img src="img3.jpg" alt="" class="ui medium rounded image"></div>
+                        <div class="column"><img src="img1.jpeg" alt="" class="ui medium rounded image" onclick="openLightbox('img1.jpeg')"></div>
+                        <div class="column"><img src="img2.jpeg" alt="" class="ui medium rounded image" onclick="openLightbox('img2.jpeg')"></div>
+                        <div class="column"><img src="img3.jpg" alt="" class="ui medium rounded image" onclick="openLightbox('img3.jpg')"></div>
                     </div>
                 </div>
             </div>
@@ -252,6 +344,14 @@
         <div class="popup-content">
             <img src="vakantie.png" alt="We zijn gesloten" class="popup-image">
             <button class="close-popup" onclick="document.getElementById('closurePopup').style.display='none'">&times;</button>
+        </div>
+    </div>
+    
+    <!-- Image Lightbox -->
+    <div id="imageLightbox" class="lightbox-overlay" onclick="lightboxClick(event)">
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Gallery Image" class="lightbox-image">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
         </div>
     </div>
 </body>

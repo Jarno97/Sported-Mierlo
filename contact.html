@@ -9,9 +9,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <style>
+        /* Background image styling */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(pand.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: right;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        /* Current day highlighting */
+        .ui.list.time .item.today {
+            color: rgb(235, 0, 0) !important;
+            font-weight: bold;
+        }
+
+        .ui.list.time .item.today .content,
+        .ui.list.time .item.today .right.floated.content {
+            color: rgb(235, 0, 0) !important;
+        }
+    </style>
     <title>Sported | Contact</title>
 </head>
-<body style="background-image: url(pand.jpg);background-repeat: no-repeat; background-size: 100%; background-position: right; background-attachment: fixed;">
+<script>
+    $(document).ready(function () {
+        // Get current day (0 = Sunday, 1 = Monday, etc.)
+        var today = new Date().getDay();
+        
+        // Convert to match our list order (Monday = 0, Tuesday = 1, etc.)
+        var dayIndex;
+        if (today === 0) {
+            dayIndex = 6; // Sunday is last in our list
+        } else {
+            dayIndex = today - 1; // Monday becomes 0, Tuesday becomes 1, etc.
+        }
+        
+        // Add 'today' class to the current day
+        $('.ui.list.time .item').eq(dayIndex).addClass('today');
+    });
+</script>
+<body>
     <script src="script.js"></script>
     <div id="root2" class="container">
         <div class="ui inverted borderless main menu fixed">
@@ -112,7 +157,7 @@
                     </div>
                     <div class="six wide right aligned right floated column">
                         <h4>Sported</h4>
-                        <p>Dé Tennisspecialist van deze regio!</p>
+                        <p>Dé Tennis- en Padelspecialist van deze Regio!</p>
                     </div>
                 </div>
             </div>

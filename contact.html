@@ -1,167 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-    <style>
-        /* Background image styling */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url(pand.jpg);
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: right;
-            background-attachment: fixed;
-            z-index: -1;
-        }
-
-        /* Current day highlighting */
-        .ui.list.time .item.today {
-            color: rgb(235, 0, 0) !important;
-            font-weight: bold;
-        }
-
-        .ui.list.time .item.today .content,
-        .ui.list.time .item.today .right.floated.content {
-            color: rgb(235, 0, 0) !important;
-        }
-    </style>
-    <title>Sported | Contact</title>
+    <title>Contact | Sported Mierlo - Tennis en Padel Specialist</title>
+    <meta name="description" content="Contact Sported Mierlo: Margrietstraat 106 Mierlo, 0492-664623, info@sported.nl. Bekijk onze openingstijden en plan een bezoek.">
+    <meta name="keywords" content="contact tennis winkel Mierlo, adres, openingstijden, telefoon, email, tennislessen">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact | Sported Mierlo">
+    <meta property="og:description" content="Contactgegevens en openingstijden van Sported Mierlo. Bel ons of kom langs!">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:url" content="https://sported.nl/contact.html">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://sported.nl/contact.html">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.0.3/css/ph.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
-<script>
-    $(document).ready(function () {
-        // Get current day (0 = Sunday, 1 = Monday, etc.)
-        var today = new Date().getDay();
-        
-        // Convert to match our list order (Monday = 0, Tuesday = 1, etc.)
-        var dayIndex;
-        if (today === 0) {
-            dayIndex = 6; // Sunday is last in our list
-        } else {
-            dayIndex = today - 1; // Monday becomes 0, Tuesday becomes 1, etc.
-        }
-        
-        // Add 'today' class to the current day
-        $('.ui.list.time .item').eq(dayIndex).addClass('today');
-    });
-</script>
 <body>
-    <script src="script.js"></script>
-    <div id="root2" class="container">
-        <div class="ui inverted borderless main menu fixed">
-            <div class="ui container" style="display: flex;">
-                <div class="header item">
-                    <img src="Tlogo.png" alt="">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img loading="lazy" src="Tlogo.png" alt="Sported Mierlo">
+            </a>
+            <button class="nav-toggle" aria-label="Menu openen">
+                <i class="ph ph-list"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Diensten</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="https://www.facebook.com/Sported.sport/" class="nav-link nav-link--icon" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="container">
+            <span class="page-tag">Neem contact op</span>
+            <h1 class="page-title">Contact</h1>
+            <p class="page-subtitle">We helpen je graag persoonlijk</p>
+        </div>
+    </header>
+
+    <!-- Contact Main -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="ph ph-map-pin"></i>
+                        </div>
+                        <h3>Adres</h3>
+                        <p>Margrietstraat 106<br>5731 BP Mierlo</p>
+                    </div>
                     
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="ph ph-phone"></i>
+                        </div>
+                        <h3>Telefoon</h3>
+                        <p>0492-664623<br>06-51289157</p>
+                        <a href="tel:0492664623" class="contact-link">Bel nu</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="ph ph-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@sported.nl</p>
+                        <a href="mailto:info@sported.nl" class="contact-link">Stuur email</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="ph ph-facebook-logo"></i>
+                        </div>
+                        <h3>Facebook</h3>
+                        <p>Volg ons voor nieuws en updates</p>
+                        <a href="https://www.facebook.com/Sported.sport/" class="contact-link" target="_blank" rel="noopener">Bekijk pagina</a>
+                    </div>
                 </div>
-                <div class="borderless right menu">
-                    <a href="index.html" class="item navbar-item">Home</a>
-                    <a href="#" class="active item navbar-item">Contact</a>
-                    <a href="https://www.facebook.com/Sported.sport/" class="item navbar-item">
-                        <i class="big facebook icon"></i>
+
+                <!-- Opening Hours -->
+                <div class="contact-hours">
+                    <h2 class="contact-hours-title">Openingstijden</h2>
+                    <div class="hours-list" id="hoursList">
+                        <div class="hours-item" data-day="maandag">
+                            <span class="hours-day">Maandag</span>
+                            <span class="hours-time">Gesloten</span>
+                        </div>
+                        <div class="hours-item" data-day="dinsdag">
+                            <span class="hours-day">Dinsdag</span>
+                            <span class="hours-time">12:30 - 18:00</span>
+                        </div>
+                        <div class="hours-item" data-day="woensdag">
+                            <span class="hours-day">Woensdag</span>
+                            <span class="hours-time">12:30 - 18:00</span>
+                        </div>
+                        <div class="hours-item" data-day="donderdag">
+                            <span class="hours-day">Donderdag</span>
+                            <span class="hours-time">12:30 - 18:00</span>
+                        </div>
+                        <div class="hours-item" data-day="vrijdag">
+                            <span class="hours-day">Vrijdag</span>
+                            <span class="hours-time">12:30 - 18:00</span>
+                        </div>
+                        <div class="hours-item" data-day="zaterdag">
+                            <span class="hours-day">Zaterdag</span>
+                            <span class="hours-time">10:00 - 17:00</span>
+                        </div>
+                        <div class="hours-item" data-day="zondag">
+                            <span class="hours-day">Zondag</span>
+                            <span class="hours-time">Gesloten</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Owner Card -->
+                <div class="contact-owner">
+                    <div class="owner-card">
+                        <div class="owner-image">
+                            <img loading="lazy" src="img/Tedpersonal.jpg" alt="Ted van Gennip">
+                        </div>
+                        <div class="owner-info">
+                            <h3>Ted van Gennip</h3>
+                            <p class="owner-title">Eigenaar</p>
+                            <p class="owner-text">Al 34 jaar uw tennis- en padelspecialist in Mierlo. Hij helpt u graag met deskundig advies over rackets, bespanning en sportkleding.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="contact-map">
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.538468536437!2d5.6237!3d51.4416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6f500e68f7c9%3A0x4c4a5e5f5c5f5c5f!2sMargrietstraat%20106%2C%205731%20BP%20Mierlo!5e0!3m2!1snl!2snl!4v1609459200000!5m2!1snl!2snl" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img loading="lazy" src="Tlogo.png" alt="Sported Mierlo" class="footer-logo">
+                    <p>Dé Tennis- en Padelspecialist van Mierlo en omgeving.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigatie</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Diensten</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="ph ph-user"></i> Ted van Gennip</li>
+                        <li><i class="ph ph-map-pin"></i> Margrietstraat 106, Mierlo</li>
+                        <li><i class="ph ph-phone"></i> 0492-664623</li>
+                        <li><i class="ph ph-envelope"></i> info@sported.nl</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Volg ons</h4>
+                    <a href="https://www.facebook.com/Sported.sport/" class="social-link" aria-label="Facebook">
+                        <i class="ph ph-facebook-logo"></i>
                     </a>
                 </div>
             </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sported Mierlo. Alle rechten voorbehouden.</p>
+            </div>
         </div>
-        <div class="centered segment">
-            <div class="ui center aligned container biglogo" id="img">
-                <img id="fadelogo" src="Fulllogoblack.png" alt="" style="width: 50%; margin-right: 50px;">
-            </div>      
-        </div>
-        <div class="ui centered stackable inverted grid" id="contentcontainer">
-            <div class="row">
-                <div class="five wide column contactsegment" style="background-color: #1b1c1d;">
-                    <h1 class="ui huge inverted header" style="border-bottom: 2px rgb(235, 0, 0) solid;">Contactgegevens</h1>
-                    <div class="ui grid">
-                        <div class="eight wide column">
-                            <div class="inverted content">
-                                <p>Ted van Gennip</p>
-                                <p>Margrietstraat 106 Mierlo</p>
-                                <p>0492-664623</p>
-                                <p>06-51289157</p>
-                                <p>info@sported.nl</p>
-                            </div>
-                        </div>
-                        <div class="eight wide column">
-                            <img class="ui small right floated image" src="Tedpersonal.jpg" alt="" style="width: 100px; border-radius: 5px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="five wide column openingsegment" style="background-color: #1b1c1d;">
-                    <h1 class="ui huge inverted header" style="border-bottom: 2px rgb(235, 0, 0) solid;">Openingstijden</h1>
-                    <div class="ui list time" style="list-style: none;">
-                        <div class="item">
-                            <div class="right floated content">Gesloten</div>
-                            <div class="content">Maandag</div>
-                        </div>
-                        <div class="item">
-                            <div class="right floated content">12:30 - 18:00</div>
-                            <div class="content">Dinsdag</div>
-                        </div>
-                        <div class="item">
-                            <div class="right floated content">12:30 - 18:00</div>
-                            <div class="content">Woensdag</div>
-                        </div>
-                        <div class="item">
-                            <div class="right floated content">12:30 - 18:00</div>
-                            <div class="content">Donderdag</div>
-                        </div>
-                        <div class="item">
-                            <div class="right floated content">12:30 - 18:00</div>
-                            <div class="content">Vrijdag</div>
-                        </div>
-                        <div class="item">
-                            <div class="right floated content">10:00 - 17:00</div>
-                            <div class="content">Zaterdag</div>
-                        </div>
-                        <div class="item">
-                            <div class="right floated content">Gesloten</div>
-                            <div class="content">Zondag</div>
-                        </div>
-                        
-                    </div>
-                </div>
+    </footer>
 
-            </div>
-        </div>
-        <div class="ui inverted footer segment">
-            <div class="ui container">
-                <div class="ui stackable inverted divided equal height grid">
-                    <div class="three wide column">
-                        <h4>Navigatie</h4>
-                        <div class="ui inverted link list">
-                            <a href="index.html" class="item">Home</a>
-                            <a href="contact.html" class="item">Contact</a>
-                            <a href="https://www.facebook.com/Sported.sport/" class="item">Facebook</a>
-                        </div>
-                    </div>
-                    <div class="three wide column" id="footerContact">
-                        <h4>Contact</h4>
-                        <div class="ui footersegment list">
-                            <div class="item">Ted van Gennip</div>
-                            <div class="item">Margrietstraat 106 Mierlo</div>
-                            <div class="item">0492-664623</div>
-                            <div class="item">info@sported.nl</div>
-                        </div>
-                    </div>
-                    <div class="six wide right aligned right floated column">
-                        <h4>Sported</h4>
-                        <p>Dé Tennis- en Padelspecialist van deze Regio!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src="js/main.js"></script>
+    <script>
+        // Highlight today's opening hours
+        document.addEventListener('DOMContentLoaded', () => {
+            const days = ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag'];
+            const today = days[new Date().getDay()];
+            const todayItem = document.querySelector(`[data-day="${today}"]`);
+            if (todayItem) {
+                todayItem.classList.add('today');
+            }
+        });
+    </script>
 </body>
 </html>

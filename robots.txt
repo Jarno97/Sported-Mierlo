@@ -1,0 +1,11 @@
+# Robots.txt for Sported Mierlo
+# https://sported.nl/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://sported.nl/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1

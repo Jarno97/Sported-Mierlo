@@ -303,38 +303,13 @@
 
     <script src="js/main.js"></script>
 
-    <!-- Opening Times Overlay -->
-    <!-- <div id="opening-overlay" style="
-        display:flex;
-        position:fixed;
-        inset:0;
-        background:rgba(0,0,0,0.75);
-        z-index:9999;
-        align-items:center;
-        justify-content:center;
-        padding:1rem;
-    ">
-        <div style="position:relative;max-width:90vw;max-height:90vh;">
-            <img src="6dd0eee2-f015-42ab-acfa-c19aabd94011.jpeg"
-                 alt="Openingstijden Sported Mierlo"
-                 style="max-width:100%;max-height:85vh;border-radius:8px;display:block;box-shadow:0 8px 40px rgba(0,0,0,0.5);">
-            <button onclick="document.getElementById('opening-overlay').style.display='none'" style="
-                position:absolute;
-                top:-14px;
-                right:-14px;
-                width:34px;
-                height:34px;
-                border-radius:50%;
-                background:#fff;
-                border:none;
-                font-size:1.1rem;
-                cursor:pointer;
-                display:flex;
-                align-items:center;
-                justify-content:center;
-                box-shadow:0 2px 8px rgba(0,0,0,0.3);
-            " aria-label="Sluiten">&#x2715;</button>
+    <!-- Opening Times Modal -->
+    <div id="opening-overlay" class="modal-overlay">
+        <div class="modal-box">
+            <img src="img/image_1784536664440_g9pcvi.png"
+                 alt="Aangepaste openingstijden Sported Mierlo">
+            <button type="button" class="modal-close" id="opening-overlay-close" aria-label="Sluiten">&#x2715;</button>
         </div>
-    </div> -->
+    </div>
 </body>
 </html>

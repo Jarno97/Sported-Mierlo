@@ -815,66 +815,12 @@ ul {
     .hero-title {
         font-size: 2.25rem;
     }
-
+    
     .section-title {
         font-size: 1.75rem;
     }
-
+    
     .services-grid {
         grid-template-columns: 1fr;
     }
-}
-
-/* Opening Times Modal */
-.modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.8);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.modal-overlay.active {
-    display: flex;
-}
-
-.modal-box {
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-}
-
-.modal-box img {
-    display: block;
-    max-width: 100%;
-    max-height: 85vh;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-xl);
-}
-
-.modal-close {
-    position: absolute;
-    top: -14px;
-    right: -14px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: var(--color-white);
-    border: none;
-    font-size: 1.1rem;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-md);
-    color: var(--color-primary);
-}
-
-.modal-close:hover {
-    background: var(--color-accent);
-    color: var(--color-white);
 }

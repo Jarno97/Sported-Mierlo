@@ -88,4 +88,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+
+    // Opening times modal
+    const openingOverlay = document.getElementById('opening-overlay');
+    const openingOverlayClose = document.getElementById('opening-overlay-close');
+
+    if (openingOverlay) {
+        openingOverlay.classList.add('active');
+
+        const closeOverlay = () => openingOverlay.classList.remove('active');
+
+        openingOverlayClose?.addEventListener('click', closeOverlay);
+        openingOverlay.addEventListener('click', (e) => {
+            if (e.target === openingOverlay) closeOverlay();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeOverlay();
+        });
+    }
 });
